@@ -4,44 +4,40 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    /* scroll-behavior: smooth; */
 }
-.colorboton{
-    background-color: purple;
-    padding: 10px 20px;
-    color: white;
-    font-weight: 300;
-    letter-spacing: 2px;
-    border: none;
-    border-radius: 10px;
-}
-h2{
-    color: purple;
-    text-transform: uppercase;
-    text-align: center;
-   
-}
+
+
 .caja{
     position: fixed;
     bottom: 0;
     right: 0;
     width: 250px;
-    transform: translateY(90%);
+    /* transform: translateY(95%); */
+    transform: translateY(96.2%);
     transition: 0.7s ease;
-    
 }
+
 .caja.active{
     height: 300px;
-    transform: translateY(0%);
-
+    /* transform: translateY(0%);  */
 }
-.contenido{
+
+.contenido,
+.contenido2,
+.contenido3{
     position: relative;
     width: 100%;
     height: 100%;
     margin-bottom: 20px;
 }
-
+.cuerpo-contenido2,
+.cuerpo3{
+    height: 255px;
+    overflow: auto;
+}
+/* .cuerpo3{
+    display: none;
+} */
 .chat
 {
     position: relative;
@@ -55,16 +51,14 @@ h2{
     text-align: end;
     transition: 1.2s;
     transform: translateX(100px);
-
     border-radius: 20px 0 20px 20px;
-    margin: 5px 3px 5px 10%;
+    margin: 5px 3px 5px 9.5%;
     width: 90%;
     padding-bottom: 8px;
 }
 .yo{
     transition: 1.2s;
     transform: translateX(-100px);
- 
     border-radius: 0px 20px 20px 20px;
     margin: 10px 0 10px 3px;
     width: 90%;
@@ -90,7 +84,6 @@ h2{
     border-radius: 10px 0px 10px 10px;
 }
 .contenido .input{
-
     border: none;
     width: 80%;
     text-align: center;
@@ -99,7 +92,6 @@ h2{
     border: 1px solid  rgb(0 188 212);
     border-radius: 50px;
     color: rgb(109 105 105);
-    /* margin: 10px; */
 }
 .contenido .input::placeholder{
     color:  rgb(0 188 212);
@@ -116,13 +108,31 @@ p{
     display: inline-block;
    
 }
+.opciones{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .boton{
     width: 100%;
+    margin: 0 1px;
     height: 30px;
     border: none;
-    background-color: #e8d7d7;
-    font-weight: 600;
-
+    background-color: #fff;
+    font-weight: 100;
+    font-size: 10px;
+}
+.boton:nth-child(1){
+    border: 1px solid #00bcd4;
+    color: #00bcd4;
+}
+.boton:nth-child(2){
+    border: 1px solid #ff9800;
+    color: #ff9800;
+}
+.boton:nth-child(3){
+    border: 1px solid #ff006a;
+    color: #ff006a;
 }
 
 .escribir{
@@ -139,4 +149,9 @@ i{
     padding: 7.5px 8px;
     color: #fff;
     align-self: center;
+}
+@media (max-width: 600px){
+    .caja{
+    width: 100%;
+    }
 }
